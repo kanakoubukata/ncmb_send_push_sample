@@ -1,0 +1,40 @@
+/**/
+
+.red {
+    color: red;
+}
+
+body {
+    text-align: center;
+}
+
+* {
+    font-size: 28px;
+}
+
+ons-button {
+    width: 90%;
+    top: 20px;
+}
+
+ons-list-item {
+  border-bottom: 1px solid #ccc;
+  border-bottom: none;
+  -webkit-background-size: 100% 1px;
+  background-size: 100% 1px;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-image: -webkit-linear-gradient(90deg, #ccc, #ccc 100%);
+  background-image: -moz-linear-gradient(90deg, #ccc, #ccc 100%);
+  background-image: -o-linear-gradient(90deg, #ccc, #ccc 100%);
+  background-image: linear-gradient(0deg, #ccc, #ccc 100%);
+}
+
+ons-icon[icon="cutlery"] {
+    margin-left: 4px;
+    margin-right: 12px;
+}
+
+ons-icon[icon="coffee"] {
+    margin-right: 8px;
+}

@@ -1,0 +1,48 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <meta http-equiv="Content-Security-Policy" content="default-src * data:; style-src * 'unsafe-inline'; script-src * 'unsafe-inline' 'unsafe-eval'">
+  <script src="components/loader.js"></script>
+  <script src="lib/onsenui/js/onsenui.min.js"></script>
+  <script src="js/app.js"></script>
+  <link rel="stylesheet" href="components/loader.css">
+  <link rel="stylesheet" href="lib/onsenui/css/onsenui.css">
+  <link rel="stylesheet" href="lib/onsenui/css/onsen-css-components.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <h1>ご注文フォーム</h1>
+  <ons-list>
+    <ons-list-item>
+      <ons-icon icon="cutlery"></ons-icon>Monaca
+    </ons-list-item>
+    <ons-list-item>
+      <ons-icon icon="cutlery"></ons-icon>だんご
+    </ons-list-item>
+    <ons-list-item>
+      <ons-icon icon="cutlery"></ons-icon>あんみつ
+    </ons-list-item>
+    <ons-list-item>
+      <ons-icon icon="coffee"></ons-icon>抹茶
+    </ons-list-item>
+    <ons-list-item>
+      <ons-icon icon="coffee"></ons-icon>煎茶
+    </ons-list-item>
+  </ons-list>
+  <ons-button onclick="send()">送信</ons-button>
+  <script>
+    function send() {
+      new ncmb.Push()
+      .set("immediateDeliveryFlag", true)
+      .set("message", "新規ご注文")
+      .set("userSettingValue", {"order":order})
+      .send()
+      .then(function(){
+        alert("送信しました")
+      })
+    }
+  </script>
+</body>
+</html>
